@@ -17,26 +17,36 @@ const HeroSection = () => {
               transition={{ duration: 0.7, ease: [0.2, 0, 0, 1] }}
               className="text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold text-foreground tracking-[-0.035em] leading-[1.08]"
             >
-              Clinical insight at the intersection of{" "}
-              <span className="text-primary">healthcare</span> and{" "}
-              <span className="text-primary">technology</span>
+              Clinical insight for{" "}
+              <span className="text-primary">health technology</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.12, ease: [0.2, 0, 0, 1] }}
-              className="mt-8 text-xl text-foreground/80 leading-relaxed max-w-xl font-medium"
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0, 0, 1] }}
+              className="mt-7 text-xl text-foreground/75 leading-relaxed max-w-xl font-medium"
             >
-              HealthTechMedics brings frontline clinical perspective to conversations around digital health, artificial intelligence and healthcare innovation.
+              Helping ensure health tech ideas work in real clinical environments.
             </motion.p>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.2, 0, 0, 1] }}
-              className="mt-6 text-lg text-foreground/65 leading-relaxed max-w-xl"
+              transition={{ duration: 0.7, delay: 0.18, ease: [0.2, 0, 0, 1] }}
+              className="mt-8 space-y-6 text-lg text-foreground/60 leading-[1.8] max-w-xl"
             >
-              Founded by practising NHS clinicians, HealthTechMedics explores how emerging healthcare technologies interact with real clinical environments and healthcare systems. The organisation contributes clinical insight to discussions with founders, investors and innovators working to improve healthcare through technology.
-            </motion.p>
+              <p>
+                Many health technology ideas struggle to translate effectively into real clinical environments.
+              </p>
+              <p>
+                Founded by practising NHS clinicians, HealthTechMedics explores how emerging innovations interact with healthcare systems, clinical workflows and patient care.
+              </p>
+              <p>
+                Many promising health tech ideas fail not because of the technology itself, but because they do not align with the realities of clinical practice and healthcare delivery.
+              </p>
+              <p>
+                HealthTechMedics helps bridge this gap by bringing frontline clinical perspective into the development and adoption of health technology.
+              </p>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -69,21 +79,21 @@ const HeroSection = () => {
 
         {/* Background image with stronger fade */}
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-          <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/60 to-background/10" />
-          <img src={heroBg} className="h-full w-full object-cover opacity-70" alt="Healthcare Technology Network" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/70 to-background/15" />
+          <img src={heroBg} className="h-full w-full object-cover opacity-55" alt="Healthcare Technology Network" />
         </div>
       </section>
 
-      {/* Hero bridge line */}
-      <div className="bg-secondary py-10 lg:py-14">
+      {/* Credibility band */}
+      <div className="bg-secondary py-12 lg:py-16">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center text-lg text-foreground/60 max-w-3xl mx-auto px-6 leading-relaxed"
+          className="text-center text-lg text-foreground/55 max-w-3xl mx-auto px-6 leading-relaxed"
         >
-          HealthTechMedics contributes clinical perspective to conversations across the healthcare technology ecosystem.
+          At the intersection of clinical practice, healthcare systems and emerging technology
         </motion.p>
       </div>
     </>

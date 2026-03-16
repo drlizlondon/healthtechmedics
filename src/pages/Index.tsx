@@ -4,8 +4,9 @@ import AboutSection from "@/components/AboutSection";
 import FocusAreasSection from "@/components/FocusAreasSection";
 import ContributingSection from "@/components/ContributingSection";
 import InsightsSection from "@/components/InsightsSection";
+import PerspectivesSection from "@/components/PerspectivesSection";
+import EngagementSection from "@/components/EngagementSection";
 import WhyCliniciansSection from "@/components/WhyCliniciansSection";
-import ContinuingSection from "@/components/ContinuingSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -16,8 +17,9 @@ const Index = () => (
     <FocusAreasSection />
     <ContributingSection />
     <InsightsSection />
+    <PerspectivesSection />
+    <EngagementSection />
     <WhyCliniciansSection />
-    <ContinuingSection />
     <Footer />
   </>
 );

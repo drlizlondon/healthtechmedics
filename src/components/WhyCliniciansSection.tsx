@@ -11,17 +11,17 @@ const WhyCliniciansSection = () => (
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl lg:text-4xl font-semibold text-foreground tracking-[-0.03em] mb-10">
-            Why clinician insight matters
+            Our Perspective
           </h2>
           <div className="space-y-7 text-lg text-foreground/65 leading-[1.8]">
             <p>
-              Technology developed without meaningful clinical input often struggles to gain adoption within healthcare systems.
+              Healthcare systems are complex environments where innovation must operate safely, reliably and effectively.
             </p>
             <p>
-              Clinicians understand the practical realities of healthcare delivery, including workflow constraints, patient needs and the operational complexity of modern health services.
+              Clinicians play an essential role in shaping how digital health solutions are designed, implemented and adopted.
             </p>
             <p>
-              By combining medical insight with technological thinking, more effective and sustainable healthcare solutions can be developed.
+              HealthTechMedics contributes clinical insight to discussions about how emerging health technology ideas can responsibly support clinicians, patients and healthcare systems.
             </p>
           </div>
         </motion.div>
@@ -32,16 +32,10 @@ const WhyCliniciansSection = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h3 className="text-2xl font-semibold text-primary mb-8">Our Perspective</h3>
+          <h3 className="text-2xl font-semibold text-primary mb-8">Get in touch</h3>
           <div className="space-y-7 text-lg text-foreground/65 leading-[1.8] mb-12">
             <p>
-              Healthcare systems are complex environments where technology must operate safely, reliably and effectively.
-            </p>
-            <p>
-              Clinicians play an essential role in shaping how digital health solutions are designed, implemented and adopted.
-            </p>
-            <p>
-              HealthTechMedics contributes clinical insight to conversations around healthcare innovation, engaging with founders, investors and organisations working to improve healthcare through technology.
+              Founders, innovators and organisations exploring health technology ideas are welcome to get in touch.
             </p>
           </div>
           <div id="contact" className="flex items-center gap-4">
