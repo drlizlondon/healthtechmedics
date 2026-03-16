@@ -17,6 +17,9 @@ const Footer = () => {
             <button onClick={() => scrollTo("about")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
               About
             </button>
+            <button onClick={() => scrollTo("focus-areas")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Areas of Focus
+            </button>
             <button onClick={() => scrollTo("insights")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Insights
             </button>

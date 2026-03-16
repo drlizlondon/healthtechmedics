@@ -18,11 +18,11 @@
     --primary: 215 47% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 98%;
+    --secondary: 210 33% 97%;
     --secondary-foreground: 222 8% 26%;
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 222 8% 50%;
+    --muted: 210 33% 97%;
+    --muted-foreground: 222 8% 46%;
 
     --accent: 6 83% 72%;
     --accent-foreground: 0 0% 100%;
@@ -30,15 +30,15 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 214 20% 92%;
+    --input: 214 20% 92%;
     --ring: 215 47% 39%;
 
     --radius: 0.75rem;
 
-    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
-    --shadow-card-hover: 0 10px 15px -3px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.04), 0 2px 4px -2px rgb(0 0 0 / 0.04);
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.03), 0 1px 2px -1px rgb(0 0 0 / 0.03);
+    --shadow-card-hover: 0 10px 25px -5px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.04);
   }
 }
 
