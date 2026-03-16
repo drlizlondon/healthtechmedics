@@ -10,12 +10,12 @@ const areas = [
     text: "Examining the responsible and practical application of AI within real healthcare settings.",
   },
   {
-    title: "Digital health technologies",
-    text: "Supporting the development of technologies designed to improve patient care and clinical outcomes.",
+    title: "Digital health innovation",
+    text: "Exploring how new digital health ideas and tools may improve patient care and clinical outcomes.",
   },
   {
     title: "Clinician-led technology development",
-    text: "Encouraging greater collaboration between clinicians and technology developers so healthcare solutions reflect real clinical needs.",
+    text: "Encouraging closer collaboration between clinicians and technology developers so health tech innovations reflect real clinical needs.",
   },
 ];
 

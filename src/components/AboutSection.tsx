@@ -15,16 +15,19 @@ const AboutSection = () => (
         </h2>
         <div className="space-y-7 text-lg text-foreground/70 leading-[1.8]">
           <p>
-            HealthTechMedics brings clinical perspective to the development and adoption of healthcare technology.
+            HealthTechMedics is a clinician-led initiative exploring the intersection of clinical practice and health technology.
           </p>
           <p>
-            Founded by practising NHS clinicians, the organisation explores how emerging technologies such as artificial intelligence interact with real clinical environments and healthcare systems.
+            Healthcare innovation continues to accelerate, yet many promising ideas struggle to translate effectively into real clinical environments.
           </p>
           <p>
-            Healthcare innovation continues to accelerate, yet many technologies struggle to gain traction within day-to-day clinical practice. This often reflects a gap between technological development and the realities of healthcare delivery.
+            Founded by practising NHS clinicians, HealthTechMedics brings frontline clinical perspective to the development and adoption of health technology and digital health innovation.
           </p>
           <p>
-            HealthTechMedics contributes clinical perspective to conversations across the healthcare technology ecosystem, helping to ensure that innovation remains grounded in real-world care delivery.
+            The initiative focuses on how emerging ideas such as artificial intelligence and digital health tools interact with healthcare systems, clinical workflows and patient care.
+          </p>
+          <p>
+            HealthTechMedics sits within the broader health technology ecosystem and contributes clinical insight to discussions around how innovation can responsibly improve healthcare delivery.
           </p>
         </div>
       </motion.div>

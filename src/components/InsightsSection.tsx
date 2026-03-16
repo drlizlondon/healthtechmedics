@@ -31,10 +31,10 @@ const InsightsSection = () => (
           Clinician Perspectives on AI in General Practice
         </h3>
         <p className="text-foreground/65 leading-[1.8] mb-4 max-w-xl">
-          A short report exploring how clinicians view the growing role of artificial intelligence within everyday clinical practice, and the opportunities and challenges associated with its adoption.
+          A short report exploring how clinicians view the growing role of artificial intelligence within everyday clinical practice and the opportunities and challenges associated with its adoption.
         </p>
         <p className="text-sm text-muted-foreground leading-relaxed mb-10 max-w-xl italic">
-          Part of the HealthTechMedics insight series exploring how emerging technologies interact with real clinical environments.
+          Part of the HealthTechMedics insight series exploring how health technology innovations interact with clinical practice, healthcare systems and equitable access to care.
         </p>
         <button className="px-8 py-3.5 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200">
           Download report
