@@ -7,38 +7,38 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222 8% 26%;
+    --foreground: 218 22% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 8% 26%;
+    --card-foreground: 218 22% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 8% 26%;
+    --popover-foreground: 218 22% 18%;
 
-    --primary: 215 47% 39%;
+    --primary: 211 53% 33%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 33% 97%;
-    --secondary-foreground: 222 8% 26%;
+    --secondary: 210 29% 96%;
+    --secondary-foreground: 218 22% 18%;
 
-    --muted: 210 33% 97%;
-    --muted-foreground: 222 8% 46%;
+    --muted: 210 29% 96%;
+    --muted-foreground: 217 12% 42%;
 
-    --accent: 6 83% 72%;
+    --accent: 15 61% 64%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 20% 92%;
-    --input: 214 20% 92%;
-    --ring: 215 47% 39%;
+    --border: 214 24% 89%;
+    --input: 214 24% 89%;
+    --ring: 211 53% 33%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.04), 0 2px 4px -2px rgb(0 0 0 / 0.04);
-    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.03), 0 1px 2px -1px rgb(0 0 0 / 0.03);
-    --shadow-card-hover: 0 10px 25px -5px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+    --shadow-soft: 0 6px 18px -10px rgb(15 23 42 / 0.12);
+    --shadow-card: 0 12px 28px -22px rgb(15 23 42 / 0.16);
+    --shadow-card-hover: 0 22px 48px -30px rgb(15 23 42 / 0.2);
   }
 }
 
@@ -50,9 +50,18 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Hanken Grotesk', sans-serif;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Hanken Grotesk', sans-serif;
+  }
+
+  a {
+    @apply outline-none;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.14);
   }
 }

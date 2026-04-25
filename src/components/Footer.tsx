@@ -1,45 +1,62 @@
+import EditableText from "@/components/content/EditableText";
+import { useSiteContent } from "@/components/content/SiteContentProvider";
+
 const Footer = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+  const { content, editMode } = useSiteContent();
 
   return (
-    <footer className="py-16 bg-secondary border-t border-border">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-          <div>
-            <p className="text-lg font-semibold text-foreground">HealthTechMedics</p>
-            <p className="mt-2 text-muted-foreground max-w-sm">
-              Exploring the intersection of clinical practice and healthcare technology.
-            </p>
-          </div>
-          <div className="flex items-center gap-8">
-            <button onClick={() => scrollTo("about")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              About
-            </button>
-            <button onClick={() => scrollTo("focus-areas")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Areas of Focus
-            </button>
-            <button onClick={() => scrollTo("insights")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Insights
-            </button>
-            <button onClick={() => scrollTo("contact")} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Contact
-            </button>
+    <footer className="border-t border-border bg-secondary/55">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-14">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-md">
+            <EditableText
+              path="common.brandName"
+              as="p"
+              multiline={false}
+              className="text-lg font-semibold tracking-[-0.02em] text-foreground"
+            />
+            <EditableText
+              path="footer.description"
+              as="p"
+              className="mt-3 text-sm leading-7 text-muted-foreground"
+            />
             <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              href={`mailto:${content.common.email}`}
+              onClick={(event) => {
+                if (editMode) {
+                  event.preventDefault();
+                }
+              }}
+              className="mt-3 inline-block text-sm font-medium text-foreground transition-colors hover:text-primary"
             >
-              LinkedIn
+              <EditableText path="common.email" as="span" multiline={false} />
             </a>
           </div>
+
+          <div className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2 sm:gap-x-10">
+            {content.navigation.items.map((item, index) => (
+              <a
+                key={item.to}
+                href={item.to}
+                onClick={(event) => {
+                  if (editMode) {
+                    event.preventDefault();
+                  }
+                }}
+                className="transition-colors hover:text-foreground"
+              >
+                <EditableText path={`navigation.items.${index}.label`} as="span" multiline={false} />
+              </a>
+            ))}
+          </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} HealthTechMedics. All rights reserved.
-          </p>
+
+        <div className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
+          <EditableText
+            path="footer.copyright"
+            as="span"
+            className=""
+          />
         </div>
       </div>
     </footer>
