@@ -11,6 +11,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+const withBase = (assetPath: string) =>
+  assetPath.startsWith("/") ? `${import.meta.env.BASE_URL}${assetPath.slice(1)}` : assetPath;
+
 const InsightBriefingsSection = () => {
   const { content, editMode } = useSiteContent();
 
@@ -37,7 +40,7 @@ const InsightBriefingsSection = () => {
                     aria-label={`View ${briefing.title}`}
                   >
                     <img
-                      src={briefing.imageSrc}
+                      src={withBase(briefing.imageSrc)}
                       alt={briefing.alt}
                       className="h-[280px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.015] sm:h-[360px] lg:h-[420px]"
                     />
@@ -55,7 +58,7 @@ const InsightBriefingsSection = () => {
                   </DialogHeader>
                   <div className="max-h-[82vh] overflow-auto bg-secondary/35 p-4 sm:p-6">
                     <img
-                      src={briefing.imageSrc}
+                      src={withBase(briefing.imageSrc)}
                       alt={briefing.alt}
                       className="mx-auto h-auto w-full rounded-[20px] border border-border bg-background shadow-[var(--shadow-card)]"
                     />
@@ -97,18 +100,18 @@ const InsightBriefingsSection = () => {
                           <EditableText path={`briefings.items.${index}.description`} as="span" />
                         </DialogDescription>
                       </DialogHeader>
-                      <div className="max-h-[82vh] overflow-auto bg-secondary/35 p-4 sm:p-6">
-                        <img
-                          src={briefing.imageSrc}
-                          alt={briefing.alt}
-                          className="mx-auto h-auto w-full rounded-[20px] border border-border bg-background shadow-[var(--shadow-card)]"
-                        />
+                        <div className="max-h-[82vh] overflow-auto bg-secondary/35 p-4 sm:p-6">
+                          <img
+                            src={withBase(briefing.imageSrc)}
+                            alt={briefing.alt}
+                            className="mx-auto h-auto w-full rounded-[20px] border border-border bg-background shadow-[var(--shadow-card)]"
+                          />
                       </div>
                     </DialogContent>
                   </Dialog>
 
                   <a
-                    href={briefing.pdfSrc}
+                    href={withBase(briefing.pdfSrc)}
                     target="_blank"
                     rel="noreferrer"
                     onClick={(event) => {

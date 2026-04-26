@@ -13,6 +13,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+const withBase = (assetPath: string) =>
+  assetPath.startsWith("/") ? `${import.meta.env.BASE_URL}${assetPath.slice(1)}` : assetPath;
+
 const LabPage = () => {
   const { content, editMode } = useSiteContent();
 
@@ -172,7 +175,7 @@ const LabPage = () => {
                             {prototype.screenshots.map((shot, screenshotIndex) => (
                               <img
                                 key={`${shot.src}-${screenshotIndex}`}
-                                src={shot.src}
+                                src={withBase(shot.src)}
                                 alt={shot.alt}
                                 className="w-full rounded-[20px] border border-border bg-background shadow-[var(--shadow-card)]"
                               />
@@ -204,7 +207,7 @@ const LabPage = () => {
                               return (
                                 <img
                                   key={`${shot.src}-${screenshotIndex}`}
-                                  src={shot.src}
+                                  src={withBase(shot.src)}
                                   alt={shot.alt}
                                   className={`${offsets[screenshotIndex] ?? "relative"} ${rotations[screenshotIndex] ?? ""} rounded-[18px] border border-border bg-background shadow-[var(--shadow-card)] transition-transform duration-300 group-hover:scale-[1.01]`}
                                 />
@@ -236,7 +239,7 @@ const LabPage = () => {
                           {prototype.screenshots.map((shot, screenshotIndex) => (
                             <img
                               key={`${shot.src}-${screenshotIndex}`}
-                              src={shot.src}
+                              src={withBase(shot.src)}
                               alt={shot.alt}
                               className="w-full rounded-[20px] border border-border bg-background shadow-[var(--shadow-card)]"
                             />
