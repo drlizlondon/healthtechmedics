@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { Copy, PencilLine } from "lucide-react";
+import { Copy, PencilLine, Save } from "lucide-react";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 
 const EditModePanel = () => {
-  const { isDev, editMode, setEditMode, copyContentJson } = useSiteContent();
+  const { isDev, editMode, setEditMode, copyContentJson, saveContentToFile, resetDraftContent } =
+    useSiteContent();
   const [copied, setCopied] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [reset, setReset] = useState(false);
 
   if (!isDev) {
     return null;
@@ -47,6 +50,35 @@ const EditModePanel = () => {
           {copied ? "Copied" : "Copy updated content JSON"}
         </button>
       </div>
+
+      <button
+        type="button"
+        onClick={async () => {
+          const success = await saveContentToFile();
+          if (success) {
+            setSaved(true);
+            window.setTimeout(() => setSaved(false), 1800);
+          }
+        }}
+        className="mt-3 inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+      >
+        <Save className="h-4 w-4" />
+        {saved ? "Saved to file" : "Save to content file"}
+      </button>
+
+      <button
+        type="button"
+        onClick={() => {
+          resetDraftContent();
+          setCopied(false);
+          setSaved(false);
+          setReset(true);
+          window.setTimeout(() => setReset(false), 1800);
+        }}
+        className="mt-3 inline-flex items-center justify-center rounded-full border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+      >
+        {reset ? "Draft reset" : "Reset local draft"}
+      </button>
     </div>
   );
 };

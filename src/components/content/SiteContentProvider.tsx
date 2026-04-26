@@ -17,6 +17,8 @@ interface SiteContentContextValue {
   setEditMode: (next: boolean) => void;
   updateContentAtPath: (path: string, value: string) => void;
   copyContentJson: () => Promise<boolean>;
+  saveContentToFile: () => Promise<boolean>;
+  resetDraftContent: () => void;
 }
 
 const SiteContentContext = createContext<SiteContentContextValue | null>(null);
@@ -102,6 +104,38 @@ export const SiteContentProvider = ({ children }: { children: ReactNode }) => {
           return true;
         } catch {
           return false;
+        }
+      },
+      saveContentToFile: async () => {
+        if (!isDev) {
+          return false;
+        }
+
+        try {
+          const response = await fetch("/__save-site-content", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ content }),
+          });
+
+          return response.ok;
+        } catch {
+          return false;
+        }
+      },
+      resetDraftContent: () => {
+        setContent(cloneContent(defaultSiteContent));
+
+        if (!isDev) {
+          return;
+        }
+
+        try {
+          window.localStorage.removeItem(STORAGE_KEY);
+        } catch {
+          /* noop: reset still works even if localStorage is unavailable */
         }
       },
     }),

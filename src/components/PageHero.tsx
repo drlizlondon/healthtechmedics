@@ -9,7 +9,7 @@ interface PageHeroProps {
 
 const PageHero = ({ eyebrow, title, description, aside }: PageHeroProps) => (
   <section className="border-b border-border bg-secondary/55">
-    <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1.2fr)_minmax(300px,0.8fr)] lg:items-end lg:gap-10 lg:py-24">
+    <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1.2fr)_minmax(300px,0.8fr)] lg:items-center lg:gap-10 lg:py-24">
       <div className="max-w-3xl">
         {eyebrow ? (
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-primary/70">
