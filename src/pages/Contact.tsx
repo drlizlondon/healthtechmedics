@@ -4,9 +4,16 @@ import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/PageHero";
 import SectionIntro from "@/components/SectionIntro";
 import SiteLayout from "@/components/SiteLayout";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const ContactPage = () => {
   const { content, editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "Contact – HealthTechMedics",
+    description:
+      "Request a clinician-led review of a digital health product from Dr Lizzie Soyode and Dr Ed Cairn.",
+  });
 
   return (
     <SiteLayout>
