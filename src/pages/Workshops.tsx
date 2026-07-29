@@ -1,11 +1,19 @@
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 import PageHero from "@/components/PageHero";
 import SectionIntro from "@/components/SectionIntro";
 import SiteLayout from "@/components/SiteLayout";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const WorkshopsPage = () => {
   const { content, editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "Workshops – HealthTechMedics",
+    description:
+      "Sessions on healthcare AI, frontline workflow and clinical adoption, delivered by two practising NHS doctors.",
+  });
 
   return (
     <SiteLayout>
@@ -82,8 +90,8 @@ const WorkshopsPage = () => {
             align="center"
           />
 
-          <a
-            href={content.workshops.finalCta.buttonHref}
+          <Link
+            to={content.workshops.finalCta.buttonHref}
             onClick={(event) => {
               if (editMode) {
                 event.preventDefault();
@@ -92,7 +100,7 @@ const WorkshopsPage = () => {
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/92"
           >
             <EditableText path="workshops.finalCta.buttonLabel" as="span" multiline={false} />
-          </a>
+          </Link>
         </div>
       </section>
     </SiteLayout>

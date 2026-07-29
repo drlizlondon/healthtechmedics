@@ -1,11 +1,20 @@
 import { ArrowRight, FlaskConical, GraduationCap, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
+import MethodSection from "@/components/MethodSection";
 import SectionIntro from "@/components/SectionIntro";
 import SiteLayout from "@/components/SiteLayout";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const HomePage = () => {
   const { content, editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "HealthTechMedics – NHS doctors who review digital health products",
+    description:
+      "Dr Lizzie Soyode and Dr Ed Cairn review digital health products the way the clinician who would have to use one does. Emergency medicine and general practice.",
+  });
 
   return (
     <SiteLayout>
@@ -31,8 +40,8 @@ const HomePage = () => {
             />
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
-              <a
-                href={content.home.hero.primaryCtaHref}
+              <Link
+                to={content.home.hero.primaryCtaHref}
                 onClick={(event) => {
                   if (editMode) {
                     event.preventDefault();
@@ -41,9 +50,9 @@ const HomePage = () => {
                 className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-all duration-200 hover:bg-primary/92 hover:shadow-[var(--shadow-soft)] sm:w-auto"
               >
                 <EditableText path="home.hero.primaryCtaLabel" as="span" multiline={false} />
-              </a>
-              <a
-                href={content.home.hero.secondaryCtaHref}
+              </Link>
+              <Link
+                to={content.home.hero.secondaryCtaHref}
                 onClick={(event) => {
                   if (editMode) {
                     event.preventDefault();
@@ -52,7 +61,7 @@ const HomePage = () => {
                 className="inline-flex w-full items-center justify-center rounded-full border border-border bg-background px-6 py-3.5 text-sm font-medium text-foreground transition-all duration-200 hover:border-primary/25 hover:text-primary sm:w-auto"
               >
                 <EditableText path="home.hero.secondaryCtaLabel" as="span" multiline={false} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -101,6 +110,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <MethodSection />
 
       <section className="py-14 sm:py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
@@ -164,8 +175,8 @@ const HomePage = () => {
                   as="p"
                   className="mt-4 text-sm leading-7 text-muted-foreground"
                 />
-                <a
-                  href={project.href}
+                <Link
+                  to={project.href}
                   onClick={(event) => {
                     if (editMode) {
                       event.preventDefault();
@@ -179,7 +190,7 @@ const HomePage = () => {
                     multiline={false}
                   />
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
               </article>
             ))}
           </div>
@@ -195,8 +206,8 @@ const HomePage = () => {
             align="center"
           />
 
-          <a
-            href={content.home.finalCta.buttonHref}
+          <Link
+            to={content.home.finalCta.buttonHref}
             onClick={(event) => {
               if (editMode) {
                 event.preventDefault();
@@ -206,7 +217,7 @@ const HomePage = () => {
           >
             <EditableText path="home.finalCta.buttonLabel" as="span" multiline={false} />
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </section>
     </SiteLayout>

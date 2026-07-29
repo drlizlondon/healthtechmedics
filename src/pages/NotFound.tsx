@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 import SiteLayout from "@/components/SiteLayout";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const NotFound = () => {
   const { editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "Page not found – HealthTechMedics",
+    description: "The page you were looking for is not available.",
+  });
 
   return (
     <SiteLayout>
@@ -25,8 +32,8 @@ const NotFound = () => {
           as="p"
           className="mt-5 text-lg leading-8 text-muted-foreground"
         />
-        <a
-          href="/"
+        <Link
+          to="/"
           onClick={(event) => {
             if (editMode) {
               event.preventDefault();
@@ -35,7 +42,7 @@ const NotFound = () => {
           className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/92"
         >
           <EditableText path="notFound.buttonLabel" as="span" multiline={false} />
-        </a>
+        </Link>
       </section>
     </SiteLayout>
   );

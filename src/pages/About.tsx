@@ -1,12 +1,20 @@
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 import FounderCard from "@/components/FounderCard";
 import PageHero from "@/components/PageHero";
 import SectionIntro from "@/components/SectionIntro";
 import SiteLayout from "@/components/SiteLayout";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const AboutPage = () => {
   const { content, editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "About – Dr Lizzie Soyode and Dr Ed Cairn",
+    description:
+      "HealthTechMedics is Dr Lizzie Soyode (emergency medicine) and Dr Ed Cairn (general practice). Between us: adult and paediatric A&E, psychiatry, stroke, acute medicine, surgery.",
+  });
 
   return (
     <SiteLayout>
@@ -49,6 +57,7 @@ const AboutPage = () => {
                 name={<EditableText path={`about.foundersSection.founders.${index}.name`} as="span" multiline={false} />}
                 role={<EditableText path={`about.foundersSection.founders.${index}.role`} as="span" multiline={false} />}
                 summary={<EditableText path={`about.foundersSection.founders.${index}.summary`} as="span" />}
+                initials={founder.initials}
               />
             ))}
           </div>
@@ -119,8 +128,8 @@ const AboutPage = () => {
             align="center"
           />
 
-          <a
-            href={content.about.finalCta.buttonHref}
+          <Link
+            to={content.about.finalCta.buttonHref}
             onClick={(event) => {
               if (editMode) {
                 event.preventDefault();
@@ -129,7 +138,7 @@ const AboutPage = () => {
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/92"
           >
             <EditableText path="about.finalCta.buttonLabel" as="span" multiline={false} />
-          </a>
+          </Link>
         </div>
       </section>
     </SiteLayout>

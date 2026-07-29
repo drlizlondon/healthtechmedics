@@ -37,102 +37,114 @@ export const defaultSiteContent = {
     ]
   },
   "footer": {
-    "description": "Clinician-led healthcare innovation studio working across advisory, education and internal product exploration.",
-    "copyright": "Clinician-led insight, healthcare innovation and implementation thinking."
+    "description": "Two practising NHS doctors. We review digital health products, and we build them.",
+    "copyright": "© HealthTechMedics. Reviews are our own clinical judgement."
   },
   "home": {
     "hero": {
-      "eyebrow": "Clinician-led healthcare innovation studio",
-      "title": "Clinician-led insight, healthcare innovation and rapid product validation.",
-      "description": "HealthTechMedics works with healthcare organisations, founders and clinical teams while also developing internal healthcare technology concepts and MVPs grounded in real clinical experience.",
-      "primaryCtaLabel": "Explore Services",
-      "primaryCtaHref": "/services",
-      "secondaryCtaLabel": "View Lab Projects",
+      "eyebrow": "Clinician-led product review",
+      "title": "Why doesn't it exist already?",
+      "description": "It's the question we ask about every digital health product we review, and it usually has the answer in it. Dr Lizzie Soyode and Dr Ed Cairn — two practising NHS doctors who review products the way the clinician who'd have to use one does.",
+      "primaryCtaLabel": "Request a review",
+      "primaryCtaHref": "/contact",
+      "secondaryCtaLabel": "What we've built",
       "secondaryCtaHref": "/lab"
+    },
+    "method": {
+      "eyebrow": "How we review",
+      "title": "Every review answers five questions.",
+      "questions": [
+        "Who would actually use this?",
+        "Who else has to be involved before they can?",
+        "Who won't like it?",
+        "Why doesn't it exist already?",
+        "Who is responsible when it's wrong?"
+      ],
+      "footnote": "The fourth question usually contains the answer. Most things that look obviously missing from the NHS were tried before, or are held up by something that hasn't moved in fifteen years."
     },
     "pillars": [
       {
-        "title": "Advisory",
-        "text": "Clinical insight for healthcare products, workflows and implementation decisions."
+        "title": "Review",
+        "text": "What a clinician will actually do with your product on a bad day."
       },
       {
-        "title": "Education",
-        "text": "Workshops and practical healthcare innovation education for clinicians and teams."
+        "title": "Teach",
+        "text": "Sessions for teams who need to understand how the NHS really runs."
       },
       {
-        "title": "Lab / Ventures",
-        "text": "Internal healthcare product research, prototyping and MVP development."
+        "title": "Build",
+        "text": "We build NHS pathway tools ourselves, so we aren't reviewing from the outside."
       }
     ],
     "credibilityItems": [
-      "Practising clinicians with acute and primary care perspective",
-      "Advisory support for healthcare products and implementation questions",
-      "Education and workshops for clinical and innovation teams",
-      "Internal healthcare concepts and MVP exploration grounded in care delivery realities"
+      "Adult and paediatric A&E, general practice, psychiatry, stroke, acute medicine, surgery",
+      "We review the product, not the pitch deck",
+      "We've built NHS pathway prototypes ourselves",
+      "Findings in writing, not a workshop"
     ],
     "servicePreviewSection": {
-      "eyebrow": "Service Areas",
-      "title": "Three connected ways of working",
-      "description": "HealthTechMedics combines external advisory work, practical education and internal product exploration to stay close to healthcare implementation problems."
+      "eyebrow": "What we do",
+      "title": "Three things, and the third one matters",
+      "description": "We review products, we teach teams, and we build our own prototypes. The building is what keeps the reviewing honest."
     },
     "servicePreview": [
       {
-        "title": "Clinical product advisory",
-        "text": "Review of healthcare products, propositions and implementation plans through a clinician and service delivery lens."
+        "title": "Product review",
+        "text": "We read your product the way the clinician who'd have to use it does."
       },
       {
-        "title": "Workflow and adoption review",
-        "text": "Assessment of how a service or tool may land across clinical workflow, communication and operational pressure points."
+        "title": "Adoption review",
+        "text": "Where your product gets abandoned, and who abandons it."
       },
       {
-        "title": "Clinician research and insight",
-        "text": "Structured clinician input to support product thinking, strategic questions and early-stage healthcare decisions."
+        "title": "Clinical diligence",
+        "text": "For investors: what this hits when it meets a real service."
       }
     ],
     "studioModel": {
-      "eyebrow": "Studio Model",
-      "title": "Building internally. Advising externally.",
-      "description": "We do not only advise on healthcare innovation. We actively research, prototype and test healthcare ideas internally to stay close to real implementation problems, workflow realities and patient experience challenges.",
+      "eyebrow": "The lab",
+      "title": "We build the things we review.",
+      "description": "Anyone can have an opinion about a product. We build NHS pathway tools ourselves, which is how we know what an opinion is worth.",
       "projects": [
         {
           "tag": "MVP",
-          "title": "Result Sense",
-          "description": "Interactive clinician and patient-facing NHS pathway tools designed to make healthcare guidance more usable and actionable.",
-          "buttonLabel": "View Project",
+          "title": "Result Doctor",
+          "description": "Blood test results, explained well enough that a patient and their GP can both use them.",
+          "buttonLabel": "View project",
           "href": "/lab"
         },
         {
-          "tag": "Exploration",
-          "title": "Research Concept",
-          "description": "Early-stage clinician-led healthcare workflow and patient experience exploration.",
-          "buttonLabel": "View Project",
+          "tag": "Concept MVP",
+          "title": "ELIZA",
+          "description": "Where a referral is, and who has it. Built after too many phone calls asking exactly that.",
+          "buttonLabel": "View project",
           "href": "/lab"
         }
       ]
     },
     "finalCta": {
-      "eyebrow": "Next Step",
-      "title": "Need clinician perspective on a healthcare product, implementation challenge or internal concept?",
-      "description": "We work with healthcare organisations, innovation teams, founders and clinicians who want sharper thinking before important product or implementation decisions.",
-      "buttonLabel": "Contact HealthTechMedics",
+      "eyebrow": "Next step",
+      "title": "Want a doctor to look at it before you build it?",
+      "description": "Tell us what you're making and who it's for. We'll tell you whether we're the right people to review it.",
+      "buttonLabel": "Request a review",
       "buttonHref": "/contact"
     }
   },
   "services": {
     "hero": {
       "eyebrow": "Services",
-      "title": "Services for healthcare innovation, product decisions and implementation questions.",
-      "description": "HealthTechMedics combines clinician-led advisory, research support and healthcare innovation thinking for teams navigating healthcare products, workflows and adoption challenges.",
+      "title": "What you can ask us for.",
+      "description": "Five things, all of them a version of the same question: will a clinician actually use this?",
       "asideTitle": "Engagements",
       "asideParagraphs": [
-        "Engagements are scoped according to the type of work, urgency, preparation required and deliverables. We can provide a tailored quote after an initial discussion.",
-        "Indicative formats include advisory calls, written reviews, workshops, clinician insight projects and bespoke support."
+        "Fixed price, agreed before we start.",
+        "Calls, written reviews, workshops and clinician research. Ask, and we'll tell you if it isn't for us."
       ]
     },
     "serviceGroups": [
       {
-        "title": "Clinical Product Advisory",
-        "description": "Clinician-led review of healthcare products, propositions and service models to help teams understand whether they feel credible and usable in practice.",
+        "title": "Product review",
+        "description": "We read the product as the clinician who'd have to use it, and tell you where it stops being usable.",
         "outputsLabel": "Example outputs",
         "outputs": [
           "Written product review",
@@ -147,8 +159,8 @@ export const defaultSiteContent = {
         ]
       },
       {
-        "title": "Workflow & Adoption Review",
-        "description": "Focused assessment of workflow fit, communication challenges and adoption barriers that may affect rollout or use in live healthcare settings.",
+        "title": "Adoption review",
+        "description": "Where the tool gets abandoned in week two, and who abandons it.",
         "outputsLabel": "Example outputs",
         "outputs": [
           "Workflow friction map",
@@ -163,8 +175,8 @@ export const defaultSiteContent = {
         ]
       },
       {
-        "title": "Clinician Research & Insight",
-        "description": "Structured clinician and stakeholder input to support product development, strategic decisions and exploratory healthcare questions.",
+        "title": "Clinician research",
+        "description": "Structured input from other clinicians, for when you need more than our two opinions.",
         "outputsLabel": "Example outputs",
         "outputs": [
           "Interview synthesis",
@@ -179,8 +191,8 @@ export const defaultSiteContent = {
         ]
       },
       {
-        "title": "Healthcare AI & Digital Health Review",
-        "description": "Clinician-led review of AI-enabled workflows and digital health concepts, including communication, governance, trust and likely workflow fit.",
+        "title": "AI feature review",
+        "description": "Judged on who is accountable for the output, and what happens the day it's wrong.",
         "outputsLabel": "Example outputs",
         "outputs": [
           "AI use case review",
@@ -195,8 +207,8 @@ export const defaultSiteContent = {
         ]
       },
       {
-        "title": "Investor & Innovation Support",
-        "description": "Operational and clinical perspective for investors, innovation teams and early-stage decision-makers evaluating healthcare products and implementation risks.",
+        "title": "Clinical diligence",
+        "description": "For investors: what this product hits when it meets a real service, before you commit.",
         "outputsLabel": "Example outputs",
         "outputs": [
           "Clinical diligence notes",
@@ -214,29 +226,29 @@ export const defaultSiteContent = {
     "whyTeams": {
       "eyebrow": "Credibility",
       "title": "Why teams work with us",
-      "description": "HealthTechMedics brings practising clinician perspective into healthcare innovation questions that are often shaped by workflow, communication, implementation pressure and trust.",
+      "description": "We aren't consultants who used to be doctors. We're doctors.",
       "items": [
-        "Practising clinician perspective",
-        "Understanding of operational healthcare realities",
-        "Clinician workflow awareness",
-        "Implementation-focused thinking",
-        "Ability to access clinician insight",
-        "Healthcare communication understanding"
+        "Both of us are still on shift",
+        "We know what a bad day looks like",
+        "We know where the extra clicks land",
+        "We've watched rollouts fail from the inside",
+        "We can ask other clinicians when we need to",
+        "We explain results to patients for a living"
       ]
     },
     "finalCta": {
       "eyebrow": "Next Step",
-      "title": "Need a tailored scope?",
-      "description": "We can quote for advisory calls, written reviews, workshops, clinician insight projects and bespoke support after an initial discussion.",
-      "buttonLabel": "Request a consultation",
+      "title": "Not sure which one you need?",
+      "description": "Tell us the product and who it's for. We'll tell you.",
+      "buttonLabel": "Request a review",
       "buttonHref": "/contact"
     }
   },
   "briefings": {
     "section": {
-      "eyebrow": "Insights & Briefings",
-      "title": "Insights & Briefings",
-      "description": "Clinician-led briefing work exploring healthcare AI adoption, workflow pressures, implementation questions and practitioner perspectives."
+      "eyebrow": "Briefings",
+      "title": "What we've published",
+      "description": "Our own work, commissioned by nobody."
     },
     "items": [
       {
@@ -262,14 +274,14 @@ export const defaultSiteContent = {
   "workshops": {
     "hero": {
       "eyebrow": "Workshops",
-      "title": "Practical healthcare innovation education delivered by practising clinicians.",
-      "description": "HealthTechMedics delivers workshops for teams that want clearer understanding of healthcare AI, frontline workflows, product adoption and clinical implementation realities.",
-      "asideText": "Sessions are designed to be operationally useful for clinical, product, innovation and investment audiences rather than generic inspiration."
+      "title": "Teaching, from two people still on shift.",
+      "description": "Sessions for teams who need to understand how the NHS works before they build for it.",
+      "asideText": "Useful for product, clinical and investment teams. Not inspiration."
     },
     "tracksSection": {
-      "eyebrow": "Workshop Tracks",
+      "eyebrow": "Workshop tracks",
       "title": "Workshop tracks",
-      "description": "Content can be adapted for clinicians, innovation teams, startup founders, investor audiences and mixed healthcare groups.",
+      "description": "Adapted for whoever is in the room.",
       "items": [
         "AI in clinical environments",
         "Frontline workflow realities",
@@ -281,8 +293,8 @@ export const defaultSiteContent = {
     },
     "audienceSection": {
       "eyebrow": "Audience",
-      "title": "Who these workshops are for",
-      "description": "Workshops are suited to teams that need a stronger understanding of clinical reality, implementation and healthcare technology use in practice.",
+      "title": "Who these are for",
+      "description": "Teams building for a service they haven't worked in.",
       "audiences": [
         "Health tech startups",
         "Innovation teams",
@@ -300,8 +312,8 @@ export const defaultSiteContent = {
     },
     "finalCta": {
       "eyebrow": "Discuss a Workshop",
-      "title": "Need a workshop for your team or event?",
-      "description": "We can scope sessions for product teams, clinical teams, innovation programmes, NHS groups and investor audiences. Fees depend on format, audience, preparation required and whether follow-up materials are included.",
+      "title": "Need a session for your team?",
+      "description": "Tell us the audience and how long you've got.",
       "buttonLabel": "Discuss a workshop",
       "buttonHref": "/contact"
     }
@@ -309,14 +321,14 @@ export const defaultSiteContent = {
   "lab": {
     "hero": {
       "eyebrow": "Lab",
-      "title": "Researching, testing and building healthcare concepts grounded in clinical reality.",
-      "description": "Our lab allows us to explore healthcare problems through clinician-led research, workflow analysis, rapid prototyping and MVP development.",
-      "asideText": "The lab strengthens our advisory and education work by keeping us close to the practical realities of product design, communication and implementation in healthcare."
+      "title": "We build the things we'd want to use.",
+      "description": "Prototypes we build to find out whether an idea survives a real pathway. Not products, and not for sale.",
+      "asideText": "Building keeps us honest. It's harder to be glib about someone else's product once you've tried to ship your own."
     },
     "activeProjectsSection": {
-      "eyebrow": "Active Projects",
-      "title": "Active projects",
-      "description": "A selective view of the internal concepts we are exploring.",
+      "eyebrow": "Active projects",
+      "title": "What we're working on",
+      "description": "Currently one, properly, rather than five badly.",
       "projects": [
         {
           "tag": "Active Project",
@@ -325,22 +337,22 @@ export const defaultSiteContent = {
         }
       ],
       "studioCard": {
-        "tag": "Studio approach",
-        "title": "Why the lab exists",
-        "description": "Internal prototyping helps us stay close to healthcare product decisions, implementation constraints, communication challenges and the practical trade-offs teams face when building for live care settings."
+        "tag": "Why bother",
+        "title": "Reviewing is easy",
+        "description": "Building is where you find out what a workflow actually costs, and how many of your own assumptions were wrong."
       }
     },
     "prototypesSection": {
       "eyebrow": "Lab prototypes",
-      "title": "Lab prototypes",
-      "description": "These are internal healthcare concepts we are actively testing, using clinician-led workflow insight, public guidance and rapid MVP development.",
-      "caption": "Prototype screenshots, demo only, no real patient data.",
+      "title": "Prototypes",
+      "description": "Built against public NHS guidance, tested on ourselves first.",
+      "caption": "Prototype screenshots. Demo only, no real patient data.",
       "items": [
         {
           "title": "Result Doctor",
           "status": "Live prototype",
           "description": "Interactive NHS pathway prototype designed to make blood test guidance easier to navigate for patients and clinicians.",
-          "href": "/result-doctor",
+          "href": "",
           "viewMvpLabel": "View MVP",
           "viewScreenshotsLabel": "View screenshots",
           "screenshots": [
@@ -362,7 +374,7 @@ export const defaultSiteContent = {
           "title": "ELIZA",
           "status": "Concept MVP",
           "description": "Acute referral visibility prototype showing how referrals move between GP and specialty teams, with clear status, redirects and audit trail.",
-          "href": "/eliza",
+          "href": "https://drlizlondon.github.io/eliza/",
           "viewMvpLabel": "View MVP",
           "viewScreenshotsLabel": "View screenshots",
           "screenshots": [
@@ -383,9 +395,9 @@ export const defaultSiteContent = {
       ]
     },
     "researchAreasSection": {
-      "eyebrow": "Research Areas",
-      "title": "Research areas",
-      "description": "The lab focuses on healthcare problems where clinician perspective, workflow analysis and communication design have a direct effect on whether a concept is likely to work.",
+      "eyebrow": "Research areas",
+      "title": "What we keep coming back to",
+      "description": "The places where good ideas quietly die.",
       "items": [
         "Clinical workflows",
         "Patient understanding",
@@ -397,95 +409,97 @@ export const defaultSiteContent = {
     },
     "collaboration": {
       "eyebrow": "Collaboration",
-      "title": "Discuss a collaboration",
-      "description": "We also collaborate with clinicians, founders and healthcare organisations exploring early-stage healthcare ideas and implementation challenges.",
-      "buttonLabel": "Discuss a collaboration",
+      "title": "Building something similar?",
+      "description": "If you're working on this and want a second opinion, get in touch.",
+      "buttonLabel": "Get in touch",
       "buttonHref": "/contact"
     }
   },
   "about": {
     "hero": {
       "eyebrow": "About",
-      "title": "Founded by practising NHS clinicians.",
-      "description": "HealthTechMedics was built to bridge the gap between healthcare reality and healthcare innovation through advisory work, education and clinician-led product exploration.",
+      "title": "Two doctors who kept being asked the same question.",
+      "description": "Founders and teams kept showing us products and asking whether they'd work. The honest answer usually depended on things nobody in the room had seen — the referral, the handover, the 3am phone call. So we started answering properly.",
       "asideEyebrow": "At a glance",
       "asideItems": [
-        "Acute and primary care perspective",
-        "Founder-led advisory and education",
-        "Internal healthcare innovation studio model"
+        "Both still practising in the NHS",
+        "You deal with us, not an associate",
+        "We build our own prototypes"
       ]
     },
     "foundersSection": {
       "eyebrow": "Founders",
-      "title": "Two practising doctors with complementary perspectives",
-      "description": "HealthTechMedics combines acute care and primary care insight to help teams understand how healthcare products, education and implementation plans may land in practice.",
+      "title": "Two practising NHS doctors",
+      "description": "Between us: adult and paediatric A&E, psychiatry, stroke, acute medicine, surgery. We've seen the presentation before anyone sorted it, and the referral after it went wrong.",
       "founders": [
         {
-          "name": "Dr Lizzie",
-          "role": "A&E doctor",
-          "summary": "Co-founder of HealthTechMedics. Brings acute care perspective, frontline workflow understanding and interest in healthcare technology and clinical communication."
+          "name": "Dr Lizzie Soyode",
+          "role": "Emergency medicine",
+          "initials": "LS",
+          "summary": "Works where nothing has been sorted yet and the decision still has to be made. Reviews products for what they cost a clinician mid-shift."
         },
         {
-          "name": "Dr Ed",
-          "role": "GP",
-          "summary": "Co-founder of HealthTechMedics. Brings primary care perspective, patient journey understanding and insight into everyday clinical decision-making and service pressures."
+          "name": "Dr Ed Cairn",
+          "role": "General practice",
+          "initials": "EC",
+          "summary": "Sees the same patient six weeks later, and everything that lands in the inbox when a pathway doesn't work. Reviews products for what happens after the handover."
         }
       ]
     },
     "whyBuiltSection": {
-      "eyebrow": "Why We Built HealthTechMedics",
-      "title": "Why we built HealthTechMedics",
-      "description": "HealthTechMedics was created to bring clearer clinical perspective into healthcare product thinking, implementation decisions and healthcare innovation work.",
+      "eyebrow": "Why we bother",
+      "title": "Three things we kept seeing",
+      "description": "None of this is complicated. It's just easier to see from inside the department than from outside it.",
       "items": [
         {
           "number": "01",
-          "title": "Product assumptions often miss healthcare reality",
-          "text": "Healthcare products are frequently built around assumptions that make sense on paper but break down when they meet clinical workflow, pressure and communication complexity."
+          "title": "The demo is not the shift",
+          "text": "Products get designed against a version of the clinical day where nothing else is happening. There is no such day."
         },
         {
           "number": "02",
-          "title": "Implementation failures are often predictable",
-          "text": "Many healthcare tools struggle not because the idea is poor, but because adoption, trust, responsibility and workflow fit were not understood early enough."
+          "title": "Most of it was predictable",
+          "text": "The tool rarely fails because the idea was bad. It fails because nobody asked who becomes responsible when it's wrong."
         },
         {
           "number": "03",
-          "title": "Clinician perspective is often brought in too late",
-          "text": "HealthTechMedics was built to help close that gap by bringing practising clinician perspective into innovation, product development and implementation thinking earlier."
+          "title": "Doctors get asked last",
+          "text": "By the time a clinician sees it, the architecture is set and the money is spent. We'd rather be the awkward conversation in month one."
         }
       ]
     },
     "howWeWorkSection": {
-      "eyebrow": "How We Work",
+      "eyebrow": "How we work",
       "title": "How we work",
-      "description": "HealthTechMedics is designed for organisations that want direct clinician input without unnecessary complexity.",
+      "description": "Small, direct, and finished when we said it would be.",
       "items": [
-        "Focused, founder-led input",
-        "Honest, clinically grounded feedback",
-        "Clear written summaries where useful",
-        "Practical perspective without unnecessary complexity",
-        "Suitable for advisory, workshops, diligence and research support"
+        "You get the two of us, not an associate",
+        "We tell you what we'd tell a colleague",
+        "Findings in writing",
+        "No framework you have to learn",
+        "Scope and price agreed before we start"
       ]
     },
     "finalCta": {
       "eyebrow": "Contact",
-      "title": "Looking for clinician input on a healthcare innovation question?",
-      "description": "We support advisory work, education, internal concept discussions, product reviews and implementation-focused conversations.",
-      "buttonLabel": "Request a consultation",
+      "title": "Want us to look at something?",
+      "description": "Send it over with a sentence on who it's for.",
+      "buttonLabel": "Request a review",
       "buttonHref": "/contact"
     }
   },
   "contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Request a consultation.",
-      "description": "We work with organisations, founders, clinicians and healthcare teams exploring healthcare products, implementation, education and innovation challenges.",
+      "title": "Tell us what you're building.",
+      "description": "Products, pathways, or a pilot that isn't being used. If it isn't for us, we'll say so and tell you who is.",
       "asideTitle": "Email",
-      "asideText": "Engagements are scoped according to the type of work, urgency, preparation required and deliverables. We can provide a tailored quote after an initial discussion."
+      "asideText": "Fixed price, agreed before we start."
     },
     "introSection": {
       "eyebrow": "Enquiries",
-      "title": "Tell us what you need",
-      "description": "Contact HealthTechMedics to discuss advisory support, workshops, product review, research collaboration, lab discussions or speaking opportunities. If helpful, you can also request our services and workshop brochure by email."
+      "title": "What to send",
+      "description": "A link or a deck, and one sentence on who is meant to use it. That's enough for us to tell you whether we can help."
     },
     "form": {
       "labels": {

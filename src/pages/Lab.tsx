@@ -1,4 +1,5 @@
-import { ArrowRight, ExternalLink, ImageIcon } from "lucide-react";
+import { ExternalLink, ImageIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 import PageHero from "@/components/PageHero";
@@ -12,12 +13,19 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const withBase = (assetPath: string) =>
   assetPath.startsWith("/") ? `${import.meta.env.BASE_URL}${assetPath.slice(1)}` : assetPath;
 
 const LabPage = () => {
   const { content, editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "Lab – HealthTechMedics",
+    description:
+      "Result Doctor and ELIZA: NHS pathway prototypes built by practising clinicians. Demo only, no real patient data.",
+  });
 
   return (
     <SiteLayout>
@@ -122,22 +130,26 @@ const LabPage = () => {
                   />
 
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                    <a
-                      href={prototype.href}
-                      onClick={(event) => {
-                        if (editMode) {
-                          event.preventDefault();
-                        }
-                      }}
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-all duration-200 hover:bg-primary/92 hover:shadow-[var(--shadow-soft)]"
-                    >
-                      <EditableText
-                        path={`lab.prototypesSection.items.${prototypeIndex}.viewMvpLabel`}
-                        as="span"
-                        multiline={false}
-                      />
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
+                    {prototype.href ? (
+                      <a
+                        href={prototype.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(event) => {
+                          if (editMode) {
+                            event.preventDefault();
+                          }
+                        }}
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-all duration-200 hover:bg-primary/92 hover:shadow-[var(--shadow-soft)]"
+                      >
+                        <EditableText
+                          path={`lab.prototypesSection.items.${prototypeIndex}.viewMvpLabel`}
+                          as="span"
+                          multiline={false}
+                        />
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    ) : null}
 
                     <Dialog>
                       <DialogTrigger asChild>
@@ -291,8 +303,8 @@ const LabPage = () => {
             align="center"
           />
 
-          <a
-            href={content.lab.collaboration.buttonHref}
+          <Link
+            to={content.lab.collaboration.buttonHref}
             onClick={(event) => {
               if (editMode) {
                 event.preventDefault();
@@ -301,7 +313,7 @@ const LabPage = () => {
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/92"
           >
             <EditableText path="lab.collaboration.buttonLabel" as="span" multiline={false} />
-          </a>
+          </Link>
         </div>
       </section>
     </SiteLayout>

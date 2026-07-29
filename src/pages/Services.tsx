@@ -1,12 +1,20 @@
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 import InsightBriefingsSection from "@/components/InsightBriefingsSection";
 import PageHero from "@/components/PageHero";
 import SectionIntro from "@/components/SectionIntro";
 import SiteLayout from "@/components/SiteLayout";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const ServicesPage = () => {
   const { content, editMode } = useSiteContent();
+
+  usePageMeta({
+    title: "Services – HealthTechMedics",
+    description:
+      "Clinician-led product review, workflow and adoption assessment, and clinical diligence for investors, from two practising NHS doctors.",
+  });
 
   return (
     <SiteLayout>
@@ -130,8 +138,8 @@ const ServicesPage = () => {
             align="center"
           />
 
-          <a
-            href={content.services.finalCta.buttonHref}
+          <Link
+            to={content.services.finalCta.buttonHref}
             onClick={(event) => {
               if (editMode) {
                 event.preventDefault();
@@ -140,7 +148,7 @@ const ServicesPage = () => {
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/92"
           >
             <EditableText path="services.finalCta.buttonLabel" as="span" multiline={false} />
-          </a>
+          </Link>
         </div>
       </section>
     </SiteLayout>

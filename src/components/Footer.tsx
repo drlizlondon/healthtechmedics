@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import EditableText from "@/components/content/EditableText";
 import { useSiteContent } from "@/components/content/SiteContentProvider";
 
@@ -35,9 +36,9 @@ const Footer = () => {
 
           <div className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2 sm:gap-x-10">
             {content.navigation.items.map((item, index) => (
-              <a
+              <Link
                 key={item.to}
-                href={item.to}
+                to={item.to}
                 onClick={(event) => {
                   if (editMode) {
                     event.preventDefault();
@@ -46,7 +47,7 @@ const Footer = () => {
                 className="transition-colors hover:text-foreground"
               >
                 <EditableText path={`navigation.items.${index}.label`} as="span" multiline={false} />
-              </a>
+              </Link>
             ))}
           </div>
         </div>
